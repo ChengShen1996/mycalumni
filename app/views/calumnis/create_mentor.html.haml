@@ -1,0 +1,26 @@
+%h2 Please complete your profile
+
+= form_for createandlogin_path do
+
+  = cookies[:email].inspect
+
+  = label :people, :username, 'Username'
+  = text_field :people, 'username'
+  = label :people, :description, 'Description'
+  = text_field :people, 'description'
+  = label :people, :company, 'Company'
+  = text_field :people, 'company'
+  = label :people, :start_date, 'Start Date'
+  = text_field :people, 'start_date'
+  = label :people, :resume, 'Resume'
+  = text_field :people, 'resume'
+  = label :people, :university, 'University'
+  = text_field :people, 'university'
+  = label :people, :major, 'Major'
+  = text_field :people, 'major'
+  = label :people, :graduation, 'Graduation Year'
+  = text_field :people, 'graduation'
+
+  = label :people, :avatar, 'Your avatar'
+  = file_field :people, :avatar
+  = submit_tag 'Submit Profile'
