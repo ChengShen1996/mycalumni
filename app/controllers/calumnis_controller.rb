@@ -37,7 +37,7 @@ class CalumnisController < ApplicationController
     params[:people][:email]=cookies[:email]
     people_params[:email]=cookies[:email]
     p people_params,"again"
-    
+
     @calumni = People.create!(people_params)
     redirect_to profile_path
   end
@@ -53,14 +53,7 @@ class CalumnisController < ApplicationController
         @people.first.save
         redirect_to profile_path
   end
-  def testprofile
-    @people= People.select{|p| p.email==cookies[:email]}
-  end
-
-  def testselect
-    byebug
-  end
-    
+  
   
 
   def profile
